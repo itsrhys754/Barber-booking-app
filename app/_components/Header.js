@@ -34,8 +34,8 @@ function Header() {
             '>
                 <Link href={'/'} className='hover:scale-105 hover:text-primary
                 cursor-pointer'>Home</Link>
-                <h2 className='hover:scale-105 hover:text-primary
-                cursor-pointer'>Services</h2>
+                <Link href={'/services'} className='hover:scale-105 hover:text-primary
+                cursor-pointer'>Services</Link>
                 <Link href={'/about'} className='hover:scale-105 hover:text-primary
                 cursor-pointer'>About us</Link>
                 <Link href={'https://blackwoodbarber.setmore.com/beta'} className='hover:scale-105 hover:text-primary
