@@ -22,61 +22,110 @@ function Header() {
   };
 
   return (
-    <div className="p-5 shadow-sm flex justify-between">
-      <div className="flex items-center gap-8">
+    <div className="p-5 shadow-sm flex justify-between items-center bg-white">
+      <div className="flex items-center">
         <Link href="/">
           <Image src="/logo.svg" alt="logo" width={180} height={100} />
         </Link>
-        <div
-          className={`mobile-menu ${
-            showMenu ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row items-center gap-6`}
-        >
+        <div className="ml-8 hidden md:flex gap-6">
           <Link
             href={"/"}
-            className="hover:scale-105 hover:text-primary cursor-pointer"
+            className="text-gray-700 hover:text-primary transition-colors duration-300"
           >
             Home
           </Link>
           <Link
             href={"/services"}
-            className="hover:scale-105 hover:text-primary cursor-pointer"
+            className="text-gray-700 hover:text-primary transition-colors duration-300"
           >
             Services
           </Link>
           <Link
             href={"/about"}
-            className="hover:scale-105 hover:text-primary cursor-pointer"
+            className="text-gray-700 hover:text-primary transition-colors duration-300"
           >
             About us
           </Link>
           <Link
             href={"https://blackwoodbarber.setmore.com/beta"}
-            className="hover:scale-105 hover:text-primary cursor-pointer"
+            className="text-gray-700 hover:text-primary transition-colors duration-300"
           >
             Book
           </Link>
         </div>
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden ml-auto">
           <button
             id="menu-toggle"
-            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+            className="text-gray-700 hover:text-primary focus:outline-none"
             onClick={toggleMenu}
           >
-            <svg
-              className="h-6 w-6"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
+            {showMenu ? (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            )}
           </button>
+        </div>
+      </div>
+      <div
+        className={`md:hidden ${
+          showMenu ? "fixed top-0 left-0 w-full h-screen bg-white z-50" : "hidden"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full">
+          <Link
+            href={"/"}
+            className="block py-4 text-gray-700 hover:text-primary transition-colors duration-300"
+            onClick={toggleMenu}
+          >
+            Home
+          </Link>
+          <Link
+            href={"/services"}
+            className="block py-4 text-gray-700 hover:text-primary transition-colors duration-300"
+            onClick={toggleMenu}
+          >
+            Services
+          </Link>
+          <Link
+            href={"/about"}
+            className="block py-4 text-gray-700 hover:text-primary transition-colors duration-300"
+            onClick={toggleMenu}
+          >
+            About us
+          </Link>
+          <Link
+            href={"https://blackwoodbarber.setmore.com/beta"}
+            className="block py-4 text-gray-700 hover:text-primary transition-colors duration-300"
+            onClick={toggleMenu}
+          >
+            Book
+          </Link>
         </div>
       </div>
       {/* <div>
