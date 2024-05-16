@@ -10,7 +10,7 @@ function BusinessList({businessList,title}) {
         <div className='grid grid-cols-2 md:grid-cols-3
         lg:grid-cols-4 gap-6 mt-5 '>
             {businessList.length>0?businessList.map((business,index)=>(
-                <Link href={'/details/'+business.id}
+                <Link href={business.contactPerson}
                 key={index} className='shadow-md 
                 rounded-lg hover:shadow-lg cursor-pointer
                  hover:shadow-primary
@@ -26,7 +26,7 @@ function BusinessList({businessList,title}) {
                     items-baseline p-3 gap-1'>
                     
                         <h2 className='font-bold text-lg'>{business.name}</h2>
-                        <h2 className='text-primary'>{business.contactPerson}</h2>
+                        {/* <h2 className='text-primary'>{business.contactPerson}</h2> */}
                         <h2 className='text-gray-500 text-sm'>{business.address}</h2>
                         <Button className="rounded-lg mt-3">Book Now</Button>
                     </div>

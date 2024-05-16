@@ -77,8 +77,11 @@ const getAllBusinessList = async () => {
       }
     }
     `
+
     const result=await request(MASTER_URL,mutationQuery)
     return result;
+
+    
   }
 
   const BusinessBookedSlot=async(businessId,date)=>{
@@ -122,14 +125,11 @@ const getAllBusinessList = async () => {
   const deleteBooking=async(bookingId)=>{
     const mutationQuery=gql`
     mutation DeleteBooking {
-      updateBooking(
-        data: {userName: "RRRS"}
-        where: {id: "cltastwp36re707jzb02sgdlm"}
-      ) {
+      deleteBooking(where: {id: "`+bookingId+`"}) {
         id
       }
     }
-    
+
     
     `
   
@@ -137,13 +137,14 @@ const getAllBusinessList = async () => {
     return result;
   
   }
-  
+
   export default{
     getAllBusinessList,
     getBusinessById,
     createNewBooking,
     BusinessBookedSlot,
     GetUserBookingHistory,
-    deleteBooking
+    deleteBooking,
+
 };
   

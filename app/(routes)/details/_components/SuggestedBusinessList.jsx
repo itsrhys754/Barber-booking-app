@@ -32,12 +32,14 @@ function SuggestedBusinessList({business}) {
   return (
     <div className='md:pl-10'>
      
+     <Link href={'https://rhyso6vv.setmore.com/beta'}>
       <BookingSection business={business}>
         <Button className="flex gap-2 w-full">
         <NotebookPen/>
         Book Appointment  
         </Button> 
       </BookingSection>
+      </Link>
       <div className='hidden md:block'>
       <h2 className='font-bold 
       text-lg mt-3 mb-3

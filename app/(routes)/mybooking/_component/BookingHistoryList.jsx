@@ -53,7 +53,7 @@ function BookingHistoryList({bookingHistory,type}) {
                     Service on : <span className='text-black'> {booking.date}</span></h2>
                     <h2 className='flex gap-2 text-gray-500'>
                      <Clock className='text-primary'/> 
-                    Service on : <span className='text-black'> {booking.time}</span></h2>
+                    Service at : <span className='text-black'> {booking.time}</span></h2>
                             
                 </div>
             </div>

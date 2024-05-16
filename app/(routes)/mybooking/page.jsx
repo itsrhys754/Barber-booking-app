@@ -40,6 +40,8 @@ function MyBooking() {
                 <TabsList className="w-full justify-start">
                     <TabsTrigger value="booked">Booked</TabsTrigger>
                     <TabsTrigger value="completed">Completed</TabsTrigger>
+                    <TabsTrigger value="completed">Cancelled</TabsTrigger>
+
                 </TabsList>
                 <TabsContent value="booked">
                     <BookingHistoryList 
@@ -51,6 +53,13 @@ function MyBooking() {
                 <BookingHistoryList 
                 bookingHistory={filterData('completed')}
                 type='completed'/>
+                    
+                </TabsContent>
+                
+                <TabsContent value="cancelled">
+                <BookingHistoryList 
+                bookingHistory={filterData('cancelled')}
+                type='cancelled'/>
                     
                 </TabsContent>
             </Tabs>
