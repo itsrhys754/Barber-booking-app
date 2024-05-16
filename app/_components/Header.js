@@ -46,7 +46,7 @@ function Header() {
             </div>
            
         </div>
-        <div>
+        {/* <div>
           {data?.user?
           
           <DropdownMenu>
@@ -64,9 +64,9 @@ function Header() {
     <DropdownMenuItem>
      <Link href={'/mybooking'}>My Booking</Link> 
       </DropdownMenuItem>
-    <DropdownMenuItem onClick={()=>signOut()}>Logout</DropdownMenuItem>
+    <DropdownMenuItem onClick={()=>signOut()}>Logout</DropdownMenuItem> */}
    
-  </DropdownMenuContent>
+  {/* </DropdownMenuContent>
 </DropdownMenu>
 
           :  
@@ -74,7 +74,7 @@ function Header() {
           <Button onClick={()=>signIn('descope')}>Login / Sign Up</Button>
 
         }
-            </div>
+            </div> */}
     </div>
   )
 }
