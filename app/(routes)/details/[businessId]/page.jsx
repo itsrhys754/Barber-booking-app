@@ -31,14 +31,15 @@ function BusinessDetail({params}) {
           return <p>Loading...</p>
       }
   
-      if(status=='unauthenticated')
-      {
-          signIn('descope');
-      }
+      // if(status=='unauthenticated')
+      // {
+      //     signIn('descope');
+      // }
   
     }
 
-    return status=='authenticated'&&business&&(
+    // status=='authenticated'&&
+    return business&&(
       <div className='py-8 md:py-20
     px-10 md:px-36'>
         <BusinessInfo business={business} />
