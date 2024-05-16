@@ -10,12 +10,15 @@
     "email": "email dev"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6",
+    "@maptiler/leaflet-maptilersdk": "^2.0.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@react-email/components": "0.0.17",
+    "@react-google-maps/api": "^2.19.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dropdown-menu": "^0.1.1",
