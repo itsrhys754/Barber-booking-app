@@ -23,6 +23,7 @@
     "clsx": "^2.1.1",
     "dropdown-menu": "^0.1.1",
     "email": "^0.2.6",
+    "framer-motion": "^11.2.6",
     "graphql": "^16.8.1",
     "graphql-request": "^7.0.1",
     "lucide-react": "^0.378.0",

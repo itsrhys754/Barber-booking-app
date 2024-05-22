@@ -2,9 +2,16 @@
 import React from "react";
 import Image from "next/image";
 import barberShop from "../../img/barber.png";
+import { motion } from "framer-motion";
 
 function MyBooking() {
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{duration:0.5}}
+    >
     <div className="my-10 mx-5 md:mx-36">
       <h2 className="font-bold text-[20px] mb-6">About Us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -58,6 +65,7 @@ function MyBooking() {
 ></iframe>
       </div>
     </div>
+    </motion.div>
   );
 }
 
