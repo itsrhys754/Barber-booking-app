@@ -47,7 +47,7 @@ function Header() {
             About us
           </Link>
           <Link
-            href={"https://blackwoodbarber.setmore.com/beta"}
+            href={"https://barbershopname.setmore.com/beta"}
             className="text-gray-700 hover:text-primary transition-colors duration-300"
           >
             Book
@@ -120,7 +120,7 @@ function Header() {
             About us
           </Link>
           <Link
-            href={"https://blackwoodbarber.setmore.com/beta"}
+            href={"https://barbershopname.setmore.com/beta"}
             className="block py-4 text-gray-700 hover:text-primary transition-colors duration-300"
             onClick={toggleMenu}
           >

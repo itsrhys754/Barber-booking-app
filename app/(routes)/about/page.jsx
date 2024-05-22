@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import barberShop from "../../img/barbershop.png";
+import barberShop from "../../img/barber.png";
 
 function MyBooking() {
   return (
@@ -20,7 +20,7 @@ function MyBooking() {
         <div>
           <h3 className="text-xl font-semibold mb-4">Our Story</h3>
           <p className="text-gray-600 mb-4">
-            At The Blackwood Barber Co., we are passionate about providing
+            At The Barber Shop, we are passionate about providing
             exceptional grooming services in a welcoming and relaxing
             environment. Our team of skilled barbers is dedicated to delivering
             the highest quality haircuts, shaves, and beard trims, ensuring that
