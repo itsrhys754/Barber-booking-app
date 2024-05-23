@@ -6,6 +6,9 @@ import GlobalApi from "./_services/GlobalApi";
 import React, { useState, useEffect } from 'react';
 import BusinessList from "./_components/BusinessList";
 import { motion } from 'framer-motion';
+import { ThemeProvider } from "./_components/ThemeProvider"
+import { ModeToggle } from "./_components/ModeToggle";
+import Header from "./_components/Header";
 
 
 export default function Home() {
@@ -25,16 +28,18 @@ const getAllBusinessList=()=>{
   })
 }
 
-  return (
-    <motion.div
-    initial={{opacity:0}}
-    animate={{opacity:1}}
-    exit={{opacity:0}}
-    transition={{duration:0.5}}
-    >
-      <SearchSection/>
-      <BusinessList businessList={businessList}
-      title={'Select your barber'} />
-    </motion.div>
-  );
+return (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+  <Header />
+  <SearchSection />
+  <BusinessList businessList={businessList} title={'Select your barber'} />
+</ThemeProvider>
+  </motion.div>
+);
 }

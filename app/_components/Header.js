@@ -12,6 +12,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import { useTheme } from 'next-themes';
+import { ModeToggle } from "./ModeToggle";
+
 
 function Header() {
   const { data } = useSession();
@@ -21,8 +24,15 @@ function Header() {
     setShowMenu(!showMenu);
   };
 
+  const { theme } = useTheme(); // Get the current theme
+
+
   return (
-    <div className="p-5 shadow-sm flex justify-between items-center bg-white">
+    <div
+    className={`p-5 shadow-sm flex justify-between items-center ${
+      theme === "dark" ? "bg-navy-800 text-foreground" : "bg-white text-gray-800"
+    }`}
+  >
       <div className="flex items-center">
         <Link href="/">
           <Image src="/logo.svg" alt="logo" width={180} height={100} />
@@ -52,6 +62,11 @@ function Header() {
           >
             Book
           </Link>
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="ml-4">
+          <ModeToggle />
         </div>
       </div>
       <div className="md:hidden">
@@ -128,7 +143,17 @@ function Header() {
           </Link>
         </div>
       </div>
-      {/* <div>
+    </div>
+
+    
+  );
+}
+
+export default Header;
+
+
+
+  {/* <div>
         {data?.user ? (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -155,8 +180,3 @@ function Header() {
           <Button onClick={() => signIn("descope")}>Login / Sign Up</Button>
         )}
       </div> */}
-    </div>
-  );
-}
-
-export default Header;
