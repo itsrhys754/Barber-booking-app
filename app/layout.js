@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <NextAuthSessionProvider>
         <div className="mx-6 md:mx-16">
-          {/* <Header /> */}
+          <Header />
           <Toaster />
           {children}
         </div>

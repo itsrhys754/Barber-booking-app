@@ -34,12 +34,9 @@ return (
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
-  >
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-  <Header />
-  <SearchSection />
-  <BusinessList businessList={businessList} title={'Select your barber'} />
-</ThemeProvider>
+  >  
+      <SearchSection />
+      <BusinessList businessList={businessList} title={'Select your barber'} />
   </motion.div>
 );
 }
